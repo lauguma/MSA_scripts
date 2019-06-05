@@ -10,11 +10,8 @@ import sys
 import copy
 
 
-<<<<<<< HEAD
 # USAGE python translate.py -h
-=======
-#USAGE python translate.py -h
->>>>>>> 745cf6398f506ef8f383c884179690fde967fb09
+
 
 def main():
 
