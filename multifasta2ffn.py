@@ -13,13 +13,7 @@ import os
 
 
 
-'''
-This script takes multifasta files containing annotated CDS coming from different genomes as input.
-It takes the gene ID and calculate the number of common genes among genomes to create
-new fasta files: one fasta file per gene containing all input genomes
-'''
-
-# USAGE: python multifasta2ffn.py < common_list_name.txt >
+# USAGE: python multifasta2ffn.py -fasta < fasta extension of the CDS files >  -out < output fasta extension of the single CDS fasta files >
 
 
 def main():
