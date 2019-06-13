@@ -7,7 +7,6 @@ from Bio.Seq import Seq
 from Bio.Alphabet.IUPAC import *
 from Bio.SeqRecord import SeqRecord
 import sys
-import copy
 
 
 # USAGE python translate.py -h
