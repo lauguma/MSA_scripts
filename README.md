@@ -43,3 +43,15 @@ new fasta files: one fasta file per gene containing all input genomes.
 python multifasta2ffn.py -fasta .cds.fna -out .ffn
 ```
 
+- msa2phy.py
+
+Python script to format conversion for Multiple Sequence Alignments:
+from Fasta format to Phylip sequential format
+
+```
+python msa2phy.py -msa MSA_file.fasta -out outFile.phy
+```
+
+
+
+
