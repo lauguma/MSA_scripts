@@ -46,10 +46,10 @@ python multifasta2ffn.py -fasta .cds.fna -out .ffn
 - msa2phy.py
 
 Python script to format conversion for Multiple Sequence Alignments:
-from Fasta format to Phylip sequential format
+from Fasta format to Phylip sequential/interleaved formats (if sequential: set -sequential option). 
 
 ```
-python msa2phy.py -msa MSA_file.fasta -out outFile.phy
+python msa2phy.py -msa MSA_file.fasta -out outFile.phy -sequential < optional >
 ```
 
 
