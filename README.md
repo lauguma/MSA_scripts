@@ -52,6 +52,30 @@ from Fasta format to Phylip sequential/interleaved formats (if sequential: set -
 python msa2phy.py -msa MSA_file.fasta -out outFile.phy -sequential < optional >
 ```
 
+- blastORFinder.py
+
+Python script to find a coding sequence in a fasta file (e. g. a contigs file) after using blast to figure out its location
+
+Use example:
+Imagine that you want to extract a gene sequence after a genome assembly. You are only interested in one gene sequence or in a low number of
+gene sequences so it is not necessary a genome annotation for the moment. If you have a gene sequence from a close relative of the organism you
+can figure out if the gene is present in your genome and in which position and contig by using blastn. 
+e. g.
+
+```
+makeblastdb -in contigs.fasta -dbtype nucl -parse_seqids
+blastn -db contigs.fa -query query.fa -outfmt 6 -out blast_result.blastn
+```
+
+In the file blast_result.blastn you can find the location of that gene if the gene has been found.
+You can use this python script to extract the Open Reading Frame corresponding to that location.
+If the ORF is found and is complete (It starts by ATG and ends by a stop codon) the sequence will be 
+saved in a file called completeCDS_xx.fna. If the ORF is not complete, you will obtain a fasta file named partialCDS_xx.fna
+
+```
+python blastORFinder.py -fasta contigs.fasta -blast blast_results.blastn 
+```
+
 
 
 
